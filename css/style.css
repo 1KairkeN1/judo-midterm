@@ -1,0 +1,140 @@
+:root {
+  --primary-navy: #1e50a2;
+  --accent-red: #d9534f;
+  --bg-light: #f8f9fa;
+  --dark-slate: #111111;
+  --border-color: #e0e0e0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark-slate);
+  background-color: var(--bg-light);
+}
+
+.navbar-custom {
+  background-color: var(--primary-navy);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #ffffff;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #dcdcdc;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(30, 80, 162, 0.85), rgba(17, 17, 17, 0.85)), url('../images/hero.jpg') center/cover no-repeat;
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.principle-card {
+  background-color: #ffffff;
+  border-left: 5px solid var(--primary-navy);
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.principle-card.accent {
+  border-left-color: var(--accent-red);
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.card-item {
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card-item p {
+  flex-grow: 1;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.news-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.news-body {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  flex: 1;
+}
+
+.news-desc { 
+  flex-grow: 1; 
+}
+
+.news-date { 
+  font-size: 0.85rem; 
+  color: #777; 
+  margin-top: 10px; 
+}
+
+.btn-judo {
+  background-color: var(--accent-red);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-judo:hover {
+  background-color: #c9302c;
+  color: #ffffff;
+}
+
+.table-judo th {
+  background-color: var(--primary-navy);
+  color: #ffffff;
+}
+
+footer {
+  background-color: var(--dark-slate);
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: 40px;
+}
