@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule & Join | Judo Club</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">KODOKAN JUDO CLUB</a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="join.html">Schedule & Join</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    
+    <section class="mb-5">
+      <h2 class="fw-bold mb-3">Weekly Training Schedule</h2>
+      <p>Please review our weekly schedule before booking your free trial session.</p>
+      
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-judo text-center align-middle">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Program</th>
+              <th>Time</th>
+              <th>Instructor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday & Wednesday</td>
+              <td>Beginner Judo (White - Green)</td>
+              <td>18:00 - 19:30</td>
+              <td>Sensei Serik</td>
+            </tr>
+            <tr>
+              <td>Tuesday & Thursday</td>
+              <td>Adult Fitness & Self-Defense</td>
+              <td>19:00 - 20:30</td>
+              <td>Sensei Petrov</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>Open Randori (All Belts)</td>
+              <td>18:30 - 20:30</td>
+              <td>Guest Instructors</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>Competition Squad</td>
+              <td>10:00 - 12:30</td>
+              <td>Sensei Serik</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card p-4 shadow-sm">
+          <h2 class="fw-bold mb-3 text-center">Register for a Free Trial Class</h2>
+          <form action="#" method="POST">
+            
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName">
+              </div>
+              
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+
+              <div class="col-md-6">
+                <label for="beltRank" class="form-label">Current Experience Level</label>
+                <select class="form-select" id="beltRank" required>
+                  <option value="" selected disabled>Choose your rank</option>
+                  <option value="none">Complete Beginner (No Experience)</option>
+                  <option value="white">White / Yellow Belt</option>
+                  <option value="intermediate">Green / Blue / Brown Belt</option>
+                  <option value="black">Black Belt (Dan Rank)</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="session" class="form-label">Preferred Program</label>
+                <select class="form-select" id="session" required>
+                  <option value="beginner">Beginner Judo</option>
+                  <option value="fitness">Adult Fitness & Self-Defense</option>
+                  <option value="competition">Competition Squad</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <label for="notes" class="form-label">Medical Notes or Questions</label>
+                <textarea class="form-control" id="notes" rows="3"></textarea>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-judo btn-lg w-100 mt-2">Submit Application</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Kodokan Judo Club. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
