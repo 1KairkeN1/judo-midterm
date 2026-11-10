@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule & Join | Judo Club</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <img src="images/Black.png" alt="Logo" width="75" height="40">
+        KODOKAN JUDO CLUB
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="join.html">Schedule & Join</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="tournament.html">Tournaments</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    
+    <section class="mb-5">
+      <h2 class="fw-bold mb-3">Weekly Training Schedule</h2>      
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-judo text-center align-middle">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Program</th>
+              <th>Time</th>
+              <th>Instructor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday & Wednesday</td>
+              <td>Beginner Judo (White - Green)</td>
+              <td>18:00 - 19:30</td>
+              <td>Sensei Serik</td>
+            </tr>
+            <tr>
+              <td>Tuesday & Thursday</td>
+              <td>Adult Fitness & Self-Defense</td>
+              <td>19:00 - 20:30</td>
+              <td>Sensei Petrov</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>Open Randori (All Belts)</td>
+              <td>18:30 - 20:30</td>
+              <td>Guest Instructors</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>Competition Squad</td>
+              <td>10:00 - 12:30</td>
+              <td>Sensei Serik</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card p-4 shadow-sm">
+          <h2 class="fw-bold mb-3 text-center">Register for a Free Trial Class</h2>
+          
+          <form id="trialForm" novalidate>
+            <div class="row g-3">
+              
+              <div class="col-md-6">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" required minlength="3">
+                <div class="invalid-feedback" id="fullNameError">Please enter your full name (at least 3 characters).</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required minlength="6">
+                <div class="invalid-feedback" id="passwordError">Password must be at least 6 characters long.</div>
+              </div>
+              
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" required>
+                <div class="invalid-feedback" id="emailError">Please enter a valid email address.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phoneNumber" required pattern="[0-9+\\-\\s]{10,}">
+                <div class="invalid-feedback" id="phoneNumberError">Please enter a valid phone number (at least 10 digits).</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="beltRank" class="form-label">Current Experience Level</label>
+                <select class="form-select" id="beltRank" required>
+                  <option value="" selected disabled>Choose your rank</option>
+                  <option value="none">Complete Beginner (No Experience)</option>
+                  <option value="white">White / Yellow Belt</option>
+                  <option value="intermediate">Green / Blue / Brown Belt</option>
+                  <option value="black">Black Belt (Dan Rank)</option>
+                </select>
+                <div class="invalid-feedback" id="beltRankError">Please select your experience level.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="session" class="form-label">Preferred Program</label>
+                <select class="form-select" id="session" required>
+                  <option value="" selected disabled>Choose your program</option>
+                  <option value="beginner">Beginner</option>
+                  <option value="fitness">Intermediate</option>
+                  <option value="competition">Olympic</option>
+                </select>
+                <div class="invalid-feedback" id="sessionError">Please select a preferred program.</div>
+              </div>
+
+              <div class="col-12">
+                <div id="errorSummaryBox" class="alert alert-danger d-none mb-0" role="alert">
+                  Please correct the highlighted errors before submitting.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-danger btn-lg w-100 mt-2">Submit Application</button>
+              </div>
+            </div>
+          </form>
+
+          <div id="successCard" class="card mt-4 p-4 border-primary bg-white d-none text-center">
+            <h4 class="text-primary fw-bold mb-3">Application Submitted</h4>
+            <p class="mb-1"><strong id="resName"></strong>. We have received your trial class request.</p>
+            <p class="mb-3">Confirmation email has been sent to <strong id="resEmail"></strong>.</p>
+                  </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Kodokan Judo Club. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/effects.js"></script>
+</body>
+</html>
